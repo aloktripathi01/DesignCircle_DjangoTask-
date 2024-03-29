@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-# tasks/models.py
 
 from django.utils import timezone
 
@@ -14,6 +13,7 @@ class Task(models.Model):
 
     name = models.CharField(max_length=100)
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
+    # Here create_time & updated_time will record the time automatic
     create_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
 

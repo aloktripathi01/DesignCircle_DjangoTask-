@@ -1,4 +1,4 @@
-# tasks/views.py
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework import viewsets
@@ -8,7 +8,7 @@ from .models import Task
 from .serializers import TaskSerializer
 
 class TaskPagination(PageNumberPagination):
-    # setting the number items in each page
+    # setting the number of items in each page like it will show 10 items only  
     page_size = 10  
     page_size_query_param = 'page_size'  
     max_page_size = 100  
@@ -20,7 +20,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     ordering_fields = ['create_time', 'updated_time']
     search_fields = ['name', 'category']
     filterset_class = TaskFilter
-    pagination_class = TaskPagination  # Add pagination class to viewset
+    pagination_class = TaskPagination  
 
 
 #end

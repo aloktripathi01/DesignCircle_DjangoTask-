@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'MyTaskAssignment.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        # My DB details
         'NAME': 'MYDB',
         'USER': 'postgres',
         'PASSWORD' : '12345',
